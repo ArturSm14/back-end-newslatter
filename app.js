@@ -6,8 +6,8 @@ const app = express();
 const PORT = 3001;
 
 app.use((req, res , next) => {
-    res.header("Acess-Control-Allow-Origin","*");
-    res.header("Acess-Control-Allow-Headers","Origin, X-Request-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Headers","Origin, X-Request-With, Content-Type, Accept");
     next();
 });
 

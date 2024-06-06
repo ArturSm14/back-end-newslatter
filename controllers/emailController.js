@@ -1,5 +1,5 @@
 
-import { db } from "../config/firebase";
+import { db } from "../config/firebase.js";
 
 const EmailController = {
     getEmails : async (req, res) => {
@@ -22,6 +22,14 @@ const EmailController = {
         if (!email || !name) {
             return res.status(400).json({ message: 'Email and name are required' });
         }
+
+        await db.collection('emails').add({
+            email,
+            name
+        }).then(() => {
+            res.json({ message : 'Email e nome cadastrado com sucesso!'})
+            return
+        })
     }
 }
 

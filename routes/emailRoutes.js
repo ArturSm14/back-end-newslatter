@@ -7,4 +7,6 @@ router.post('/register-email', EmailController.registerEmail)
 
 router.get('/get-emails', EmailController.getEmails)
 
+router.post('/send-email', EmailController.sentEmail)
+
 export default router;

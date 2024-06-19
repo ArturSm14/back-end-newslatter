@@ -4,7 +4,7 @@ import { db } from "../config/firebase.js";
 import postgres  from "../config/postgres.js";
 
 
-const RESEND_KEY = "re_6CVgPG19_C5ByFmBsYUa9qRB7Ko839Pzg"
+const RESEND_KEY = process.env.RESEND_KEY
 
 const EmailController = {
     getEmails : async (req, res) => {
